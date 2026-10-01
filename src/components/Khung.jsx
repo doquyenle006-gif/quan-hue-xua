@@ -1,6 +1,6 @@
-function Khung({ tieuDe, hanhDong, children }) {
+function Khung({ id, tieuDe, hanhDong, children }) {
   return (
-    <section className="khung">
+    <section id={id} className="khung">
       <div className="khung-header">
         <h2>{tieuDe}</h2>
 

@@ -15,11 +15,9 @@ function GioHang({ gio, dsMon }) {
   }, [gio, dsMon])
 
   return (
-    <section data-testid="gio-hang">
-      <h2>Giỏ hàng</h2>
-
+    <section className="gio-hang" data-testid="gio-hang">
       {gio.length === 0 ? (
-        <p>Giỏ hàng trống</p>
+        <p className="gio-trong">Giỏ hàng trống</p>
       ) : (
         <>
           <ul>
@@ -36,14 +34,16 @@ function GioHang({ gio, dsMon }) {
 
               return (
                 <li key={dong.id}>
-                  {mon.ten} × {dong.soLuong} —{' '}
-                  {dinhDangGia(thanhTien)}
+                  <span>
+                    {mon.ten} × {dong.soLuong}
+                  </span>
+                  <strong>{dinhDangGia(thanhTien)}</strong>
                 </li>
               )
             })}
           </ul>
 
-          <p data-testid="tong-tien">
+          <p className="tong-tien" data-testid="tong-tien">
             Tổng tiền: {dinhDangGia(tongTien)}
           </p>
         </>

@@ -5,6 +5,8 @@ export const dsMon = [
     moTa: 'Bún bò truyền thống với nước dùng đậm đà.',
     gia: 45000,
     daHet: false,
+    mau: 'linear-gradient(135deg, #f6b163, #dd7748)',
+    hinh: 'https://images.unsplash.com/photo-1547592180-85f173990554?auto=format&fit=crop&w=900&q=80',
   },
   {
     id: 2,
@@ -12,6 +14,8 @@ export const dsMon = [
     moTa: 'Cơm hến đặc sản xứ Huế.',
     gia: 35000,
     daHet: false,
+    mau: 'linear-gradient(135deg, #f2d17a, #d7a14e)',
+    hinh: 'https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=900&q=80',
   },
   {
     id: 3,
@@ -19,6 +23,8 @@ export const dsMon = [
     moTa: 'Bánh bèo Huế mềm thơm, ăn kèm nước mắm.',
     gia: 30000,
     daHet: false,
+    mau: 'linear-gradient(135deg, #f9d7a0, #e59d66)',
+    hinh: 'https://images.unsplash.com/photo-1559847844-5315695dadae?auto=format&fit=crop&w=900&q=80',
   },
   {
     id: 4,
@@ -26,6 +32,8 @@ export const dsMon = [
     moTa: 'Bánh lọc nhân tôm thịt truyền thống.',
     gia: 40000,
     daHet: false,
+    mau: 'linear-gradient(135deg, #f7b989, #cf6d3e)',
+    hinh: 'https://images.unsplash.com/photo-1525351484163-7529414344d8?auto=format&fit=crop&w=900&q=80',
   },
   {
     id: 5,
@@ -33,6 +41,8 @@ export const dsMon = [
     moTa: 'Bánh nậm mềm với nhân tôm thịt.',
     gia: 35000,
     daHet: true,
+    mau: 'linear-gradient(135deg, #f3d2a6, #d9906a)',
+    hinh: 'https://images.unsplash.com/photo-1544025162-d76694265947?auto=format&fit=crop&w=900&q=80',
   },
   {
     id: 6,
@@ -40,6 +50,8 @@ export const dsMon = [
     moTa: 'Nem lụi nướng thơm ăn kèm rau sống.',
     gia: 50000,
     daHet: false,
+    mau: 'linear-gradient(135deg, #f5c678, #c7753c)',
+    hinh: 'https://images.unsplash.com/photo-1555939594-58d7cb561ad1?auto=format&fit=crop&w=900&q=80',
   },
   {
     id: 7,
@@ -47,6 +59,8 @@ export const dsMon = [
     moTa: 'Các loại chè truyền thống của Huế.',
     gia: 25000,
     daHet: false,
+    mau: 'linear-gradient(135deg, #f5dd9d, #d98c5f)',
+    hinh: 'https://images.unsplash.com/photo-1563805042-7684c019e1cb?auto=format&fit=crop&w=900&q=80',
   },
   {
     id: 8,
@@ -54,6 +68,8 @@ export const dsMon = [
     moTa: 'Đặc sản Huế với vị chua cay đặc trưng.',
     gia: 60000,
     daHet: false,
+    mau: 'linear-gradient(135deg, #f3ac7a, #d65b36)',
+    hinh: 'https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&w=900&q=80',
   },
 ]
 

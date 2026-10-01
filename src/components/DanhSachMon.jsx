@@ -7,8 +7,11 @@ function DanhSachMon({
   onDat,
 }) {
   return (
-    <section>
-      <h2>Danh sách món</h2>
+    <section id="menu-section" className="menu-section">
+      <div className="section-head">
+        <span className="section-kicker">Thực đơn</span>
+        <h2>Danh sách món</h2>
+      </div>
 
       <div className="danh-sach-mon">
         {dsMon.map((mon) => (

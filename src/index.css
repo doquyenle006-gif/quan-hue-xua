@@ -2,10 +2,24 @@
   box-sizing: border-box;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   margin: 0;
-  font-family: Arial, sans-serif;
-  background: #f5f5f5;
+  min-width: 320px;
+  min-height: 100vh;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background:
+    radial-gradient(circle at top left, rgba(251, 203, 140, 0.4), transparent 28%),
+    linear-gradient(180deg, #fffaf5 0%, #fef4ee 100%);
+  color: #2d1c12;
+}
+
+img {
+  max-width: 100%;
+  display: block;
 }
 
 button,
@@ -22,79 +36,14 @@ button:disabled {
   cursor: not-allowed;
 }
 
-.app {
-  max-width: 1000px;
-  margin: 0 auto;
-  padding: 24px;
+#root {
+  min-height: 100vh;
 }
 
-.header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-bottom: 24px;
-}
-
-.danh-sach-mon {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 16px;
-}
-
-.mon-an {
-  padding: 16px;
-  background: white;
-  border: 2px solid #ddd;
-  border-radius: 8px;
-  cursor: pointer;
-}
-
-.mon-an.dang-chon {
-  border-color: #2563eb;
-  background: #eff6ff;
-}
-
-.het-mon {
-  display: block;
-  margin-bottom: 8px;
-  font-weight: bold;
-}
-
-.khung {
-  margin-top: 24px;
-  padding: 20px;
-  background: white;
-  border-radius: 8px;
-}
-
-.khung-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.loi {
-  color: #dc2626;
-}
-
-form > div {
-  margin-bottom: 16px;
-}
-
-label {
-  display: block;
-  margin-bottom: 6px;
-  font-weight: bold;
-}
-
-input,
-textarea {
-  width: 100%;
-  padding: 8px;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-}
-
-textarea {
-  min-height: 80px;
+p,
+h1,
+h2,
+h3,
+ul {
+  margin-top: 0;
 }

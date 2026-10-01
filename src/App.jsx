@@ -8,7 +8,7 @@ import useLocalStorage from './hooks/useLocalStorage'
 import { dsMon } from './data/monAn'
 
 function App() {
-  const tenQuan = import.meta.env.VITE_TEN_QUAN
+  const tenQuan = import.meta.env.VITE_TEN_QUAN || 'QUÁN HUẾ XƯA'
 
   const [gio, setGio] = useLocalStorage(
     'gio-hang',
@@ -65,49 +65,84 @@ function guiDon(thongTin) {
   }, [tongPhan, tenQuan])
 
   return (
-    <div className="app">
-      <Header
-        tenQuan={tenQuan}
-        tongPhan={tongPhan}
-      />
+    <div className="app-shell">
+      <div className="app">
+        <Header
+          tenQuan={tenQuan}
+          tongPhan={tongPhan}
+        />
 
-      <DanhSachMon
-        dsMon={dsMon}
-        idDangChon={idDangChon}
-        onChon={setIdDangChon}
-        onDat={datMon}
-      />
+        <section className="hero-panel">
+          <div className="hero-copy">
+            <span className="eyebrow">MÓN NGON TỪ CỔ ĐÔ</span>
+            <h2>
+              Một chút <span className="script-text">Huế</span>,
+              <br />
+              thưởng cả nhà.
+            </h2>
+            <p>
+              Vị cay nồng của bún bò, chút đậm đà của cơm hến – món ngon thân
+              quen xứ Huế được nấu bằng tất cả tâm tình.
+            </p>
 
-      <Khung
-        tieuDe="Giỏ hàng"
-        hanhDong={
-          <button
-            type="button"
-            onClick={xoaGioHang}
-          >
-            Xóa giỏ hàng
-          </button>
-        }
-      >
-        <GioHang
-          gio={gio}
+            <div className="hero-actions">
+              <a href="#dat-mon" className="primary-btn">Đặt ngay</a>
+              <a href="#menu-section" className="secondary-btn">Xem thực đơn</a>
+            </div>
+          </div>
+
+          <div className="hero-visual" aria-hidden="true">
+            <div className="hero-bowl">
+              <div className="hero-bowl-inner" />
+              <div className="hero-stamp">
+                <span>VỊ NGON</span>
+                <span className="stamp-big">TỪ</span>
+                <span className="stamp-big">1986</span>
+                <small>ĐẶT CỔ ĐÔ</small>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <DanhSachMon
           dsMon={dsMon}
+          idDangChon={idDangChon}
+          onChon={setIdDangChon}
+          onDat={datMon}
         />
-      </Khung>
 
-      <Khung tieuDe="Đặt món">
-        {tenNguoiDat && (
-  <p role="status">
-    Đã nhận đơn của {tenNguoiDat}
-  </p>
-)}
+        <Khung
+          id="gio-hang"
+          tieuDe="Giỏ hàng"
+          hanhDong={
+            <button
+              type="button"
+              onClick={xoaGioHang}
+            >
+              Xóa giỏ hàng
+            </button>
+          }
+        >
+          <GioHang
+            gio={gio}
+            dsMon={dsMon}
+          />
+        </Khung>
 
-        <FormDatMon
-          key={lanGui}
-          onGui={guiDon}
-          choPhepGui={gio.length > 0}
-        />
-      </Khung>
+        <Khung id="dat-mon" tieuDe="Đặt món">
+          {tenNguoiDat && (
+            <p role="status">
+              Đã nhận đơn của {tenNguoiDat}
+            </p>
+          )}
+
+          <FormDatMon
+            key={lanGui}
+            onGui={guiDon}
+            choPhepGui={gio.length > 0}
+          />
+        </Khung>
+      </div>
     </div>
   )
 }
